@@ -1,0 +1,21 @@
+{
+    "languageserver": {
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": [
+                "go.mod"
+            ],
+            "filetypes": [
+                "go"
+            ]
+        }
+    },
+    "snippets.ultisnips.enable": true,
+    "snippets.ultisnips.directories": [
+    	"UltiSnips",
+	"$HOME/.config/nvim/UltiSnips",
+	"$HOME/.config/nvim/plugged/vim-snippets/ultisnips"
+
+    ],
+    "coc.preferences.formatOnType": true
+}

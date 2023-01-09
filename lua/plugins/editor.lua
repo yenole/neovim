@@ -41,6 +41,7 @@ return {
 		event = "VeryLazy",
 		keys = {
 			{ "<leader>=", "<cmd>FloatermNew<cr>", desc = "New Floaterm" },
+			{ "<leader>gg", "<cmd>FloatermNew lazygit<cr>", desc = "Lazygit (cmd)" },
 		},
 		init = function()
 			if vim.fn.has("win32") == 1 then

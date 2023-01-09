@@ -11,6 +11,9 @@ return {
 			},
 			{ "<leader>E", "<cmd>Neotree toggle<CR>", desc = "NeoTree (cwd)" },
 		},
+		opts = function(_, opts)
+			opts.enable_git_status = false
+		end,
 	},
 
 	-- telescope

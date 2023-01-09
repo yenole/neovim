@@ -1,4 +1,7 @@
 return {
+	--language
 	{ import = "plugins.extras.lang.golang" },
-	{ import = "plugins.extras.lang.http" },
+
+	--tools
+	{ import = "plugins.extras.tools.http" },
 }

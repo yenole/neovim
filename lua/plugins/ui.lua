@@ -26,7 +26,7 @@ return {
    ██║   ███████╗██║ ╚████║╚██████╔╝███████╗███████╗
    ╚═╝   ╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚══════╝
       ]]
-			opts.section.header.val = vim.split(logo, "\n")
+			opts.section.header.val = vim.split(logo, "\n", {})
 		end,
 	},
 }

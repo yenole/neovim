@@ -11,18 +11,10 @@ return {
 	-- rest.nvim
 	{
 		"rest-nvim/rest.nvim",
-		event = "BufEnter *.http",
+		event = "BufReadPost *.http",
 		opts = {},
 		keys = {
 			{ "<leader>hr", "<Plug>RestNvim" },
 		},
-		config = function()
-			-- vim.api.nvim_create_autocmd({ "BufEnter" }, { pattern = { "*.http" },
-			-- 	callback = function(args)
-			-- 		print("this is open http")
-			-- 	end,
-			-- })
-			require("rest-nvim").setup({})
-		end,
 	},
 }

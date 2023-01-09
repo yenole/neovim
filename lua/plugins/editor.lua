@@ -26,7 +26,7 @@ return {
 	-- hop.nvim
 	{
 		"phaazon/hop.nvim",
-		config = {
+		opts = {
 			keys = "etovxqpdygfblzhckisuran",
 			term_seq_bias = 0.5,
 		},
@@ -43,8 +43,10 @@ return {
 			{ "<leader>=", "<cmd>FloatermNew<cr>", desc = "New Floaterm" },
 		},
 		init = function()
-			if vim.fn.has("win32") then
+			if vim.fn.has("win32") == 1 then
 				vim.g.floaterm_shell = "powershell"
+			elseif vim.fn.has("mac") == 1 then
+				vim.g.floaterm_shell = "zsh"
 			end
 			vim.keymap.set("t", "<m-`>", "<cmd>FloatermToggle<cr>", { desc = "Floaterm Toggle" })
 			vim.g.floaterm_keymap_next = "<m-~>"

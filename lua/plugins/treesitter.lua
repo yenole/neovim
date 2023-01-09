@@ -4,7 +4,9 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		opts = function(_, opts)
-			opts.ensure_installed = {}
+			if vim.fn.has("win32") then
+				opts.ensure_installed = {}
+			end
 		end,
 	},
 }

@@ -22,4 +22,26 @@ return {
 			}
 		end,
 	},
+
+	-- flotterm
+	{
+		"voldikss/vim-floaterm",
+		event = "VeryLazy",
+		keys = {
+			{ "<leader>=", "<cmd>FloatermNew<cr>", desc = "New Floaterm" },
+		},
+		init = function()
+			if vim.fn.has("win32") then
+				vim.g.floaterm_shell = "powershell"
+			end
+			vim.keymap.set("t", "<m-`>", "<cmd>FloatermToggle<cr>", { desc = "Floaterm Toggle" })
+			vim.keymap.set("i", "<m-~>", "<cmd>FloatermNext<cr>", { desc = "Floaterm Next" })
+			-- vim.g.floaterm_keymap_toggle = "<leader>ot"
+			vim.g.floaterm_keymap_next = "<m-~>"
+
+			vim.g.floaterm_title = ""
+			vim.g.floaterm_width = 0.9
+			vim.g.floaterm_height = 0.7
+		end,
+	},
 }

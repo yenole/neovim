@@ -23,6 +23,18 @@ return {
 		end,
 	},
 
+	-- hop.nvim
+	{
+		"phaazon/hop.nvim",
+		config = {
+			keys = "etovxqpdygfblzhckisuran",
+			term_seq_bias = 0.5,
+		},
+		keys = {
+			{ "<leader>hp", "<cmd>HopWord<cr>", { desc = "Hop Word" } },
+		},
+	},
+
 	-- flotterm
 	{
 		"voldikss/vim-floaterm",
@@ -35,8 +47,6 @@ return {
 				vim.g.floaterm_shell = "powershell"
 			end
 			vim.keymap.set("t", "<m-`>", "<cmd>FloatermToggle<cr>", { desc = "Floaterm Toggle" })
-			vim.keymap.set("i", "<m-~>", "<cmd>FloatermNext<cr>", { desc = "Floaterm Next" })
-			-- vim.g.floaterm_keymap_toggle = "<leader>ot"
 			vim.g.floaterm_keymap_next = "<m-~>"
 
 			vim.g.floaterm_title = ""

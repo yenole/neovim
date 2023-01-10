@@ -2,9 +2,6 @@ return {
 	-- neo-tree
 	{
 		"nvim-neo-tree/neo-tree.nvim",
-		keys = {
-			{ "<leader>e", "<cmd>Neotree toggle>cr>", desc = "NeoTree" },
-		},
 		opts = function(_, opts)
 			opts.enable_git_status = false
 		end,

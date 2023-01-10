@@ -14,7 +14,7 @@ return {
 		event = "BufReadPost *.http",
 		opts = {},
 		keys = {
-			{ "<leader>hr", "<Plug>RestNvim" },
+			{ "<leader>rh", "<Plug>RestNvim" },
 		},
 	},
 }

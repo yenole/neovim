@@ -13,13 +13,9 @@ return {
 		enabled = false,
 	},
 
+	-- dracula
 	{
 		"dracula/vim",
 		name = "dracula",
-		lazy = false,
-		config = function()
-			vim.g.dracula_colorterm = 0
-			vim.cmd("colorscheme dracula")
-		end,
 	},
 }

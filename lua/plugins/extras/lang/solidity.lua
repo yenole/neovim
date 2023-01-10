@@ -15,16 +15,4 @@ return {
 			vim.list_extend(opts.ensure_installed, { "solidity" })
 		end,
 	},
-
-	-- add solang to lsconfig
-	-- {
-	-- 	"neovim/nvim-lspconfig",
-	-- 	opts = {
-	-- 		servers = {
-	-- 			solang = {
-	-- 				root_dir = require("lazyvim.util").get_root,
-	-- 			},
-	-- 		},
-	-- 	},
-	-- },
 }

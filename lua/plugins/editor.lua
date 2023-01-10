@@ -1,15 +1,9 @@
 return {
+	-- neo-tree
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		keys = {
-			{
-				"<leader>e",
-				function()
-					require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").get_root() })
-				end,
-				desc = "NeoTree (root dir)",
-			},
-			{ "<leader>E", "<cmd>Neotree toggle<CR>", desc = "NeoTree (cwd)" },
+			{ "<leader>e", "<cmd>Neotree toggle>cr>", desc = "NeoTree" },
 		},
 		opts = function(_, opts)
 			opts.enable_git_status = false
@@ -34,7 +28,7 @@ return {
 			term_seq_bias = 0.5,
 		},
 		keys = {
-			{ "<leader>hp", "<cmd>HopWord<cr>", { desc = "Hop Word" } },
+			{ "<leader>ch", "<cmd>HopWord<cr>", desc = "Hop Word" },
 		},
 	},
 
@@ -43,7 +37,7 @@ return {
 		"voldikss/vim-floaterm",
 		event = "VeryLazy",
 		keys = {
-			{ "<leader>=", "<cmd>FloatermNew<cr>", desc = "New Floaterm" },
+			{ "<leader>of", "<cmd>FloatermNew<cr>", desc = "New Floaterm" },
 			{ "<leader>gg", "<cmd>FloatermNew lazygit<cr>", desc = "Lazygit (cmd)" },
 		},
 		init = function()

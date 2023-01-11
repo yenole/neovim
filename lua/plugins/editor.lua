@@ -32,7 +32,6 @@ return {
 	-- flotterm
 	{
 		"voldikss/vim-floaterm",
-		event = "VeryLazy",
 		keys = {
 			{ "<leader>of", "<cmd>FloatermNew<cr>", desc = "New Floaterm" },
 			{ "<leader>gg", "<cmd>FloatermNew lazygit<cr>", desc = "Lazygit (cmd)" },

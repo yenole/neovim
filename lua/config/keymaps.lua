@@ -6,5 +6,6 @@ vim.keymap.set("i", "jk", "<ESC>")
 --file
 vim.keymap.set("n", "<leader>fs", "<cmd>w<cr>", { desc = "saving file" })
 
--- delete lazyvim keymap
+-- lazygit
 vim.keymap.del("n", "<leader>gG")
+vim.keymap.set("n", "<leader>gg", "<cmd>FloatermNew lazygit<cr>", { desc = "Lazygit" })

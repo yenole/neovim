@@ -32,9 +32,9 @@ return {
 	-- flotterm
 	{
 		"voldikss/vim-floaterm",
+		event = "VeryLazy",
 		keys = {
 			{ "<leader>of", "<cmd>FloatermNew<cr>", desc = "New Floaterm" },
-			{ "<leader>gg", "<cmd>FloatermNew lazygit<cr>", desc = "Lazygit (cmd)" },
 		},
 		init = function()
 			if vim.fn.has("win32") == 1 then

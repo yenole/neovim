@@ -4,7 +4,8 @@ vim.keymap.set("t", "<m-q>", "<C-\\><C-n>")
 vim.keymap.set("i", "jk", "<ESC>")
 
 --file
-vim.keymap.set("n", "<leader>fs", "<cmd>w<cr>", { desc = "saving file" })
+vim.keymap.set("n", "<leader>fs", "<cmd>w<cr>", { desc = "Saving file" })
+vim.keymap.set("n", "<leader>ft", "<cmd>FloatermNew<cr>", { desc = "Floaterm" })
 
 -- lazygit
 vim.keymap.del("n", "<leader>gG")

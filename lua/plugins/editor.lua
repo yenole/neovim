@@ -17,18 +17,6 @@ return {
 		end,
 	},
 
-	-- hop.nvim
-	{
-		"phaazon/hop.nvim",
-		opts = {
-			keys = "etovxqpdygfblzhckisuran",
-			term_seq_bias = 0.5,
-		},
-		keys = {
-			{ "<leader>ch", "<cmd>HopWord<cr>", desc = "Hop Word" },
-		},
-	},
-
 	-- flotterm
 	{
 		"voldikss/vim-floaterm",

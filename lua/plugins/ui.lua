@@ -6,13 +6,6 @@ return {
 			opts.background_colour = "#000000"
 		end,
 	},
-	-- bufferline
-	{
-		"akinsho/nvim-bufferline.lua",
-		opts = function(_, opts)
-			opts.options.numbers = "ordinal"
-		end,
-	},
 	-- dashboard
 	{
 		"goolord/alpha-nvim",

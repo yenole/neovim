@@ -8,6 +8,14 @@ return {
 		end,
 	},
 
+	-- add goimports to null-ls
+	{
+		"jose-elias-alvarez/null-ls.nvim",
+		opts = function(_, opts)
+			table.insert(opts.sources, require("null-ls").builtins.formatting.goimports)
+		end,
+	},
+
 	--
 	{
 		"williamboman/mason.nvim",

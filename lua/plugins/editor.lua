@@ -23,7 +23,7 @@ return {
 		event = "VeryLazy",
 		init = function()
 			if vim.fn.has("win32") == 1 then
-				vim.g.floaterm_shell = "pwsh"
+				vim.g.floaterm_shell = "pwsh -nologo"
 			elseif vim.fn.has("mac") == 1 then
 				vim.g.floaterm_shell = "zsh"
 			end

@@ -21,16 +21,14 @@ return {
 	{
 		"voldikss/vim-floaterm",
 		event = "VeryLazy",
-		keys = {
-			{ "<leader>ft", "<cmd>FloatermNew<cr>", desc = "New Floaterm" },
-		},
 		init = function()
 			if vim.fn.has("win32") == 1 then
-				vim.g.floaterm_shell = "powershell"
+				vim.g.floaterm_shell = "pwsh"
 			elseif vim.fn.has("mac") == 1 then
 				vim.g.floaterm_shell = "zsh"
 			end
 			vim.keymap.set("t", "<m-`>", "<cmd>FloatermToggle<cr>", { desc = "Floaterm Toggle" })
+			vim.keymap.set("t", "<m-Q>", "<cmd>FloatermKill<cr>", { desc = "Floaterm kill" })
 			vim.g.floaterm_keymap_next = "<m-~>"
 
 			vim.g.floaterm_title = ""

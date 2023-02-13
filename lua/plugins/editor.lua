@@ -29,6 +29,7 @@ return {
 			end
 			vim.keymap.set("t", "<m-`>", "<cmd>FloatermToggle<cr>", { desc = "Floaterm Toggle" })
 			vim.keymap.set("t", "<m-Q>", "<cmd>FloatermKill<cr>", { desc = "Floaterm kill" })
+			vim.keymap.set("t", "<c-n>", "<cmd>FloatermNew<cr>", { desc = "FloatermNew" })
 			vim.g.floaterm_keymap_next = "<m-~>"
 
 			vim.g.floaterm_title = ""

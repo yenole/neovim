@@ -33,8 +33,9 @@ return {
 			vim.g.floaterm_keymap_next = "<m-~>"
 
 			vim.g.floaterm_title = ""
-			vim.g.floaterm_width = 0.9
-			vim.g.floaterm_height = 0.7
+			vim.g.floaterm_width = 0.5
+			vim.g.floaterm_height = 0.5
+			vim.g.floaterm_position = "bottomright"
 		end,
 	},
 }

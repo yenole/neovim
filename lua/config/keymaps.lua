@@ -10,4 +10,4 @@ vim.keymap.set("n", "<leader>fT", "<cmd>FloatermNew<cr>", { desc = "FloatermNew"
 
 -- lazygit
 vim.keymap.del("n", "<leader>gG")
-vim.keymap.set("n", "<leader>gg", "<cmd>FloatermNew lazygit<cr>", { desc = "Lazygit" })
+-- vim.keymap.set("n", "<leader>gg", "<cmd>FloatermNew lazygit<cr>", { desc = "Lazygit" })

@@ -20,7 +20,7 @@ require("lazy").setup({
 		-- { import = "lazyvim.plugins.extras.ui.edgy" },
 		-- { import = "lazyvim.plugins.extras.formatting.pretter" },
 		-- import/override with your plugins
-		{ import = "plugins" },
+        { import = "plugins" },
 	},
 	defaults = {
 		lazy = true, -- every plugin is lazy-loaded by default

@@ -15,15 +15,15 @@ return {
 				["<m-q>"] = require("telescope.actions").close,
 			}
 		end,
+		keys = {
+			{ "<leader>/", "<cmd>FloatermToggle<cr>", desc = "FloatermToggle" },
+		},
 	},
 
 	-- flotterm
 	{
 		"voldikss/vim-floaterm",
 		event = "VeryLazy",
-		keys = {
-			{ "<c-/>", "<cmd>FloatermToggle<cr>", mode = "n" },
-		},
 		init = function()
 			if vim.fn.has("win32") == 1 then
 				vim.g.floaterm_shell = "pwsh -nologo"

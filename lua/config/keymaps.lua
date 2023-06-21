@@ -11,7 +11,4 @@ vim.keymap.set("n", "<leader>fT", "<cmd>FloatermNew<cr>", { desc = "FloatermNew"
 -- lazygit
 vim.keymap.del("n", "<leader>gG")
 
--- code
-vim.keymap.set("n", "<leader>cL", "<cmd>LspRestart<cr>", { desc = "Lsp Restart" })
-
 -- window

@@ -2,7 +2,7 @@ return {
 	{
 		"williamboman/mason.nvim",
 		opts = function(_, opts)
-			vim.list_extend(opts.ensure_installed, { "vue-language-server" })
+			vim.list_extend(opts.ensure_installed, { "vue-language-server", "emmet-language-server" })
 		end,
 	},
 
@@ -20,6 +20,7 @@ return {
 						"json",
 					},
 				},
+				emmet_language_server = {},
 			},
 		},
 	},

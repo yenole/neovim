@@ -7,6 +7,16 @@ return {
 		end,
 	},
 
+	{
+		"simrat39/symbols-outline.nvim",
+		keys = { { "<leader>o", "<cmd>SymbolsOutline<CR>", desc = "Symbols Outline" } },
+		opts = {
+			width = 45,
+			relative_width = false,
+			auto_close = true,
+		},
+	},
+
 	-- telescope
 	{
 		"nvim-telescope/telescope.nvim",

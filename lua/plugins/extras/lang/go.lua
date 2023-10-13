@@ -8,14 +8,13 @@ return {
 	{
 		"williamboman/mason.nvim",
 		opts = function(_, opts)
-			vim.list_extend(opts.ensure_installed, { "goimports", "gopls", "delve" })
+			vim.list_extend(opts.ensure_installed, { "gopls", "delve", "goimports" })
 		end,
 	},
-
 	{
-		"nvimtools/none-ls.nvim",
+		"stevearc/conform.nvim",
 		opts = function(_, opts)
-			table.insert(opts.sources, require("null-ls").builtins.formatting.goimports)
+			opts.formatters_by_ft.go = { "goimports" }
 		end,
 	},
 	{

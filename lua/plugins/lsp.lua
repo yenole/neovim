@@ -4,8 +4,8 @@ return {
 	{ import = "plugins.extras.lang.js" },
 	{ import = "plugins.extras.lang.go" },
 	{ import = "plugins.extras.lang.rust" },
-	{ import = "plugins.extras.lang.kotlin" },
-	{ import = "plugins.extras.lang.solidity" },
+	-- { import = "plugins.extras.lang.kotlin" },
+	-- { import = "plugins.extras.lang.solidity" },
 
 	--tools
 	{ import = "plugins.extras.tools.http" },

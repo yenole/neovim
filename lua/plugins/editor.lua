@@ -20,7 +20,7 @@ return {
 	-- telescope
 	{
 		"nvim-telescope/telescope.nvim",
-		keys = { { "<leader>/", "<cmd>FloatermToggle<cr>", desc = "FloatermToggle" } },
+		keys = { { "<leader>/", false } },
 		opts = function(_, opts)
 			opts.defaults.mappings.i = {
 				["<m-q>"] = require("telescope.actions").close,

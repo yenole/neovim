@@ -8,7 +8,5 @@ vim.keymap.set("n", "<leader>fs", "<cmd>w<cr>", { desc = "Saving file" })
 vim.keymap.set("n", "<leader>ft", "<cmd>FloatermToggle<cr>", { desc = "Floaterm" })
 vim.keymap.set("n", "<leader>fT", "<cmd>FloatermNew<cr>", { desc = "FloatermNew" })
 
--- lazygit
+-- delete keymap
 vim.keymap.del("n", "<leader>gG")
-
--- window

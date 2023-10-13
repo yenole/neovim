@@ -39,19 +39,6 @@ return {
 	{
 		"mfussenegger/nvim-dap",
 		opts = function(_, _)
-			local function get_input(prefix, title)
-				return coroutine.create(function(dap_run_co)
-					local args = { prefix }
-					if prefix ~= nil then
-						table.insert(args, prefix)
-					end
-					vim.ui.input({ prompt = title }, function(input)
-						args = vim.split(input or "", " ")
-						coroutine.resume(dap_run_co, args)
-					end)
-				end)
-			end
-
 			local dap = require("dap")
 			dap.adapters.go = dap.adapters.delve
 			dap.configurations.go = {
@@ -63,36 +50,25 @@ return {
 				},
 				{
 					type = "go",
-					name = "Debug (Args)",
-					request = "launch",
-					program = "${file}",
-					args = function()
-						return get_input(nil, "Args:")
-					end,
-				},
-				{
-					type = "go",
 					name = "Debug Package",
 					request = "launch",
 					program = "${fileDirname}",
 				},
 				{
 					type = "go",
-					name = "Debug Package (Args)",
-					request = "launch",
-					program = "${fileDirname}",
-					args = function()
-						return get_input(nil, "Args:")
-					end,
-				},
-				{
-					type = "go",
 					name = "Debug Test",
 					request = "launch",
 					mode = "test",
-					program = "${file}",
+					program = function()
+						return "${file}"
+					end,
 					args = function()
-						return get_input("-test.run", "Name:")
+						local line = vim.fn.getline(".")
+						if line:find("func Test") then
+							local fn = string.match(line, "func Test(%w+)")
+							return { "-test.run", "Test" .. fn }
+						end
+						return { "-test.run", "Test" .. vim.fn.input("Name:") }
 					end,
 				},
 			}

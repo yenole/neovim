@@ -59,9 +59,7 @@ return {
 					name = "Debug Test",
 					request = "launch",
 					mode = "test",
-					program = function()
-						return "${file}"
-					end,
+					program = "./${relativeFileDirname}",
 					args = function()
 						local line = vim.fn.getline(".")
 						if line:find("func Test") then

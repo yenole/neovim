@@ -20,6 +20,8 @@ return {
         ]]
 			logo = string.rep("\n", 8) .. "\n" .. logo .. "\n\n"
 			opts.config.header = vim.split(logo, "\n", {})
+            table.remove(opts.config.center, 7)
+            table.remove(opts.config.center, 7)
 		end,
 	},
 }

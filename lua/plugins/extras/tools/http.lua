@@ -13,8 +13,7 @@ return {
 		"rest-nvim/rest.nvim",
 		event = "BufReadPost *.http",
 		opts = {},
-		keys = {
-			{ "<leader>ch", "<Plug>RestNvim", desc = "Rest Request" },
-		},
+		commit = "8b62563",
+		keys = { { "<leader>ch", "<Plug>RestNvim", desc = "Rest Request" } },
 	},
 }

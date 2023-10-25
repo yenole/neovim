@@ -6,16 +6,6 @@ return {
 			opts.enable_git_status = false
 		end,
 	},
-
-	-- {
-	-- 	"simrat39/symbols-outline.nvim",
-	-- 	keys = { { "<leader>o", "<cmd>SymbolsOutline<CR>", desc = "Symbols Outline" } },
-	-- 	opts = {
-	-- 		width = 45,
-	-- 		relative_width = false,
-	-- 		auto_close = true,
-	-- 	},
-	-- },
 	{
 		"stevearc/aerial.nvim",
 		keys = { { "<leader>o", "<cmd>AerialOpen<CR>", desc = "Symbols Outline" } },

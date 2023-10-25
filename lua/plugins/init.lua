@@ -3,7 +3,7 @@ return {
 		"LazyVim/LazyVim",
 		opts = {
 			colorscheme = function()
-				vim.cmd([[colorscheme catppuccin]])
+				vim.cmd([[colorscheme rose-pine]])
 			end,
 		},
 	},
@@ -19,7 +19,7 @@ return {
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-		-- enabled = false,
+		enabled = false,
 		opts = {
 			transparent_background = true,
 		},
@@ -39,10 +39,19 @@ return {
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
-		enabled = false,
+		-- enabled = false,
 		opts = {
 			disable_background = true,
 			disable_float_background = true,
+		},
+	},
+
+	{
+		"Mofiqul/vscode.nvim",
+		name = "vscode",
+		enabled = false,
+		opts = {
+			transparent = true,
 		},
 	},
 }

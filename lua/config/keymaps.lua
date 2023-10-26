@@ -12,3 +12,4 @@ vim.keymap.set("n", "<leader>gg", utils.lazygit, { desc = "Lazygit" })
 
 -- delete keymap
 vim.keymap.del("n", "<leader>gG")
+vim.keymap.del("n", "<leader>fT")

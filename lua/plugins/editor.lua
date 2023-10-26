@@ -82,7 +82,7 @@ return {
 		keys = { { "<leader>ct", "<cmd>Translate<cr>", desc = "Translate", mode = { "n", "v" } } },
 		init = function()
 			-- vim.g.translator_proxy_url = "sock5://127.0.0.1:7890"
-			vim.g.translator_default_engines = { "haici" }
+			-- vim.g.translator_default_engines = { "haici" }
 		end,
 	},
 }

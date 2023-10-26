@@ -58,7 +58,8 @@ return {
 	-- flotterm
 	{
 		"voldikss/vim-floaterm",
-		keys = { { "<leader>/", "<cmd>FloatermToggle<cr>", desc = "FloatermToggle" } },
+		cmd = "FloatermNew",
+		keys = { { "<leader>/", "<cmd>FloatermToggle<cr>", desc = "Floaterm" } },
 		init = function()
 			if vim.fn.has("win32") == 1 then
 				vim.g.floaterm_shell = "pwsh -nologo"
@@ -66,7 +67,6 @@ return {
 				vim.g.floaterm_shell = "zsh"
 			end
 			vim.keymap.set("t", "<leader>/", "<cmd>FloatermToggle<cr>", { desc = "Floaterm Toggle" })
-			vim.keymap.set("t", "<m-Q>", "<cmd>FloatermKill<cr>", { desc = "Floaterm kill" })
 			vim.keymap.set("t", "<c-n>", "<cmd>FloatermNew<cr>", { desc = "FloatermNew" })
 			vim.g.floaterm_keymap_next = "<m-`>"
 
@@ -81,7 +81,6 @@ return {
 		"voldikss/vim-translator",
 		keys = { { "<leader>ct", "<cmd>Translate<cr>", desc = "Translate", mode = { "n", "v" } } },
 		init = function()
-			-- vim.g.translator_proxy_url = "sock5://127.0.0.1:7890"
 			-- vim.g.translator_default_engines = { "haici" }
 		end,
 	},

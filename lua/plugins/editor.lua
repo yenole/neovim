@@ -31,7 +31,7 @@ return {
 			end
 			vim.keymap.set("t", "<leader>/", "<cmd>FloatermToggle<cr>", { desc = "Floaterm Toggle" })
 			vim.keymap.set("t", "<c-n>", "<cmd>FloatermNew<cr>", { desc = "FloatermNew" })
-			vim.g.floaterm_keymap_next = "<m-`>"
+			vim.g.floaterm_keymap_next = "<m-n>"
 
 			vim.g.floaterm_title = ""
 			vim.g.floaterm_width = 0.5

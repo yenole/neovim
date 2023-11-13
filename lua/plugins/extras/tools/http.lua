@@ -14,10 +14,10 @@ return {
 		event = "BufReadPost *.http",
 		opts = {
 			result = {
-				show_curl_command = false,
+				show_curl_command = true,
 			},
 		},
 		commit = "8b62563",
-		keys = { { "<leader>ch", "<Plug>RestNvim", desc = "Rest Request" } },
+		keys = { { "<leader>cch", "<Plug>RestNvim", desc = "Rest Request" } },
 	},
 }

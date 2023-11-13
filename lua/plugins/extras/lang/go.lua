@@ -30,6 +30,25 @@ return {
 							end,
 							desc = "Run (Go)",
 						},
+						{
+							"<leader>ccr",
+							function()
+								local bufname = vim.fn.bufname():gsub(vim.fn.getcwd() .. "/", "")
+								if not bufname:find("_test.go") then
+									vim.notify("Not a test file", vim.log.levels.ERROR)
+									return
+								end
+								local dirname = vim.fn.fnamemodify(bufname, ":h")
+								local line = vim.fn.getline(".")
+								if line:find("func Test") then
+									local fn = string.match(line, "func Test(%w+)")
+									local cmd = "go test ./" .. dirname .. " -v -run Test" .. fn
+									vim.cmd("FloatermToggle output")
+									vim.cmd("FloatermSend --name=output " .. cmd)
+								end
+							end,
+							desc = "Run Test (Go)",
+						},
 					},
 				},
 			},

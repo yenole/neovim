@@ -18,10 +18,17 @@ return {
 		end,
 	},
 
+	{
+		"folke/which-key.nvim",
+		opts = function(_, opts)
+			opts.defaults["<leader>cc"] = { name = "+coding" }
+		end,
+	},
+
 	-- flotterm
 	{
 		"voldikss/vim-floaterm",
-		cmd = "FloatermNew",
+		cmd = { "FloatermNew", "FloatermToggle", "FloatermKill" },
 		keys = { { "<leader>/", "<cmd>FloatermToggle<cr>", desc = "Floaterm" } },
 		init = function()
 			if vim.fn.has("win32") == 1 then

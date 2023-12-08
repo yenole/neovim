@@ -42,7 +42,7 @@ return {
 								local line = vim.fn.getline(".")
 								if line:find("func Test") then
 									local fn = string.match(line, "func Test(%w+)")
-									local cmd = "go test ./" .. dirname .. " -v -run Test" .. fn
+									local cmd = "go test ./" .. dirname .. " -v --count 1 -run Test" .. fn
 									vim.cmd("FloatermToggle output")
 									vim.cmd("FloatermSend --name=output " .. cmd)
 								end

@@ -1,12 +1,22 @@
 return {
-	-- disable tokyonight
+	-- tokyonight
 	{
 		"folke/tokyonight.nvim",
 		name = "tokyonight",
 		enabled = false,
 	},
 
-	-- disable catppuccin
+	{
+		"Yazeed1s/oh-lucy.nvim",
+		name = "oh-lucy",
+		enabled = true,
+		init = function()
+			-- vim.g.oh_lucy_transparent_background = true
+			vim.g.oh_lucy_evening_transparent_background = true
+		end,
+	},
+
+	-- catppuccin
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
@@ -30,7 +40,7 @@ return {
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
-		-- enabled = false,
+		enabled = false,
 		opts = {
 			disable_background = true,
 			disable_float_background = true,

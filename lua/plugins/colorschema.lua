@@ -6,16 +6,6 @@ return {
 		enabled = false,
 	},
 
-	{
-		"Yazeed1s/oh-lucy.nvim",
-		name = "oh-lucy",
-		enabled = true,
-		init = function()
-			-- vim.g.oh_lucy_transparent_background = true
-			vim.g.oh_lucy_evening_transparent_background = true
-		end,
-	},
-
 	-- catppuccin
 	{
 		"catppuccin/nvim",
@@ -26,6 +16,24 @@ return {
 		},
 	},
 
+	{
+		"EdenEast/nightfox.nvim",
+		name = "nightfox",
+		enabled = true,
+		opts = {
+			options = { transparent = true },
+		},
+	},
+
+	{
+		"Yazeed1s/oh-lucy.nvim",
+		name = "oh-lucy",
+		enabled = false,
+		init = function()
+			-- vim.g.oh_lucy_transparent_background = true
+			vim.g.oh_lucy_evening_transparent_background = true
+		end,
+	},
 	-- dracula
 	{
 		"dracula/vim",
@@ -40,7 +48,7 @@ return {
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
-		enabled = false,
+		enabled = true,
 		opts = {
 			disable_background = true,
 			disable_float_background = true,

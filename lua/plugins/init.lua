@@ -3,7 +3,8 @@ return {
 		"LazyVim/LazyVim",
 		opts = {
 			colorscheme = function()
-				vim.cmd([[colorscheme oh-lucy]])
+				-- vim.cmd([[colorscheme rose-pine]])
+				vim.cmd([[colorscheme nightfox]])
 			end,
 		},
 	},

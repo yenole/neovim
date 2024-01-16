@@ -19,20 +19,10 @@ return {
 	{
 		"EdenEast/nightfox.nvim",
 		name = "nightfox",
-		enabled = true,
+		enabled = false,
 		opts = {
 			options = { transparent = true },
 		},
-	},
-
-	{
-		"Yazeed1s/oh-lucy.nvim",
-		name = "oh-lucy",
-		enabled = false,
-		init = function()
-			-- vim.g.oh_lucy_transparent_background = true
-			vim.g.oh_lucy_evening_transparent_background = true
-		end,
 	},
 	-- dracula
 	{

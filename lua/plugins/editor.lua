@@ -55,6 +55,14 @@ return {
 		end,
 	},
 
+	-- rainbow-delimiters
+	{
+		"HiPhish/rainbow-delimiters.nvim",
+		event = "BufReadPost",
+		init = function() end,
+	},
+
+	--  aerial
 	{
 		"stevearc/aerial.nvim",
 		keys = { { "<leader>o", "<cmd>AerialOpen<CR>", desc = "Symbols Outline" } },

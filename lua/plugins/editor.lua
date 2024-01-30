@@ -42,7 +42,7 @@ return {
 
 			vim.g.floaterm_title = ""
 			vim.g.floaterm_width = 0.5
-			vim.g.floaterm_height = 0.4
+			vim.g.floaterm_height = 0.45
 			vim.g.floaterm_position = "bottomright"
 		end,
 	},

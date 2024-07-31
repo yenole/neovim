@@ -18,6 +18,6 @@ return {
 			},
 		},
 		commit = "8b62563",
-		keys = { { "<leader>cch", "<Plug>RestNvim", desc = "Rest Request" } },
+		keys = { { "<leader>dh", "<Plug>RestNvim", desc = "Rest Http Request" } },
 	},
 }

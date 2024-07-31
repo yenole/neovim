@@ -18,13 +18,17 @@ return {
 		end,
 	},
 
-	{
-		"folke/which-key.nvim",
-		opts = function(_, opts)
-			opts.defaults["<leader>cc"] = { name = "+coding" }
-		end,
-	},
-
+	-- {
+	-- 	"folke/which-key.nvim",
+	-- 	opts = {
+	-- 		spec = {
+	-- 			{
+	-- 				{ "<leader>c", group = "+coding" },
+	-- 			},
+	-- 		},
+	-- 	},
+	-- },
+	--
 	-- flotterm
 	{
 		"voldikss/vim-floaterm",

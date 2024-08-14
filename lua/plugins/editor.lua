@@ -18,29 +18,16 @@ return {
 		end,
 	},
 
-	-- {
-	-- 	"folke/which-key.nvim",
-	-- 	opts = {
-	-- 		spec = {
-	-- 			{
-	-- 				{ "<leader>c", group = "+coding" },
-	-- 			},
-	-- 		},
-	-- 	},
-	-- },
-	--
 	-- flotterm
 	{
 		"voldikss/vim-floaterm",
 		cmd = { "FloatermNew", "FloatermToggle", "FloatermKill" },
-		keys = { { "<leader>/", "<cmd>FloatermToggle<cr>", desc = "Floaterm" } },
 		init = function()
 			if vim.fn.has("win32") == 1 then
 				vim.g.floaterm_shell = "pwsh -nologo"
 			elseif vim.fn.has("mac") == 1 then
 				vim.g.floaterm_shell = "zsh"
 			end
-			-- vim.keymap.set("t", "<leader>/", "<cmd>FloatermToggle<cr>", { desc = "Floaterm Toggle" })
 			vim.keymap.set("t", "<c-n>", "<cmd>FloatermNew<cr>", { desc = "FloatermNew" })
 			vim.g.floaterm_keymap_next = "<m-n>"
 

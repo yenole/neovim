@@ -10,6 +10,9 @@ vim.keymap.set("n", "<leader>ft", utils.floaterm, { desc = "Floaterm" })
 vim.keymap.set("n", "<leader>fg", utils.ranger, { desc = "Ranger" })
 vim.keymap.set("n", "<leader>gg", utils.lazygit, { desc = "Lazygit" })
 
+--覆写lazyvim函数
+LazyVim.terminal = utils.toggleterm
+
 -- delete keymap
 vim.keymap.del("n", "<leader>gG")
 vim.keymap.del("n", "<leader>fT")

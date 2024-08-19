@@ -38,7 +38,7 @@ return {
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
-		enabled = false,
+		enabled = true,
 		opts = {
 			disable_background = true,
 			disable_float_background = true,

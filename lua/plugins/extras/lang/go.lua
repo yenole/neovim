@@ -31,7 +31,7 @@ return {
 							desc = "Run (Go)",
 						},
 						{
-							"<leader>ccr",
+							"<leader>dR",
 							function()
 								local bufname = vim.fn.bufname():gsub(vim.fn.getcwd() .. "/", "")
 								if not bufname:find("_test.go") then

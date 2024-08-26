@@ -8,16 +8,11 @@ return {
 		end,
 	},
 
-	-- rest.nvim
+	-- resty.nvim
 	{
-		"rest-nvim/rest.nvim",
+		"lima1909/resty.nvim",
 		event = "BufReadPost *.http",
-		opts = {
-			result = {
-				show_curl_command = true,
-			},
-		},
-		commit = "8b62563",
-		keys = { { "<leader>dh", "<Plug>RestNvim", desc = "Rest Http Request" } },
+		keys = { { "<leader>dh", "<cmd>Resty run<cr>", desc = "Resty Run" } },
+		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 }

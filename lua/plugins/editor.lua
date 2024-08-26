@@ -4,6 +4,15 @@ return {
 		"nvim-neo-tree/neo-tree.nvim",
 		opts = function(_, opts)
 			opts.enable_git_status = false
+			opts.window.mappings = {
+				["."] = {
+					function(state)
+						local node = state.tree:get_node()
+						vim.fn.chdir(node.path)
+					end,
+					desc = "set_root",
+				},
+			}
 		end,
 	},
 

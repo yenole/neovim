@@ -12,8 +12,4 @@ function M.lazygit()
 	vim.cmd("FloatermNew --name=lazygit --width=0.85 --height=0.85 --position=center lazygit")
 end
 
-function M.ranger()
-	vim.cmd("FloatermNew --name=range --width=0.85 --height=0.85 --position=center ranger")
-end
-
 return M

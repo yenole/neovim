@@ -7,10 +7,18 @@ return {
 		end,
 	},
 
+	{
+		"simonmclean/triptych.nvim",
+		cmd = { "Triptych" },
+		dependencies = {
+			"nvim-lua/plenary.nvim", -- required
+		},
+		opts = {},
+	},
+
 	-- telescope
 	{
 		"nvim-telescope/telescope.nvim",
-		keys = { { "<leader>/", false } },
 		opts = function(_, opts)
 			opts.defaults.mappings.i = {
 				["<m-q>"] = require("telescope.actions").close,

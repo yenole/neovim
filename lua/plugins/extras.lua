@@ -1,4 +1,10 @@
 return {
+	-- lazy extras
+	{ import = "lazyvim.plugins.extras.dap.core" },
+	{ import = "lazyvim.plugins.extras.coding.codeium" },
+	-- { import = "lazyvim.plugins.extras.lang.sql" },
+
+	--
 	--language
 	-- { import = "plugins.extras.lang.php" },
 	{ import = "plugins.extras.lang.ts" },
@@ -8,13 +14,4 @@ return {
 
 	--tools
 	{ import = "plugins.extras.http" },
-
-	{
-		"neovim/nvim-lspconfig",
-		init = function()
-			local keys = require("lazyvim.plugins.lsp.keymaps").get()
-			-- 配置重启LSP
-			table.insert(keys, { "<leader>cL", "<cmd>LspRestart<cr>", desc = "Lsp Restart" })
-		end,
-	},
 }

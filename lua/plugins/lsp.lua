@@ -7,12 +7,13 @@ return {
 	-- { import = "plugins.extras.lang.kotlin" },
 
 	--tools
-	{ import = "plugins.extras.tools.http" },
+	{ import = "plugins.extras.http" },
 
 	{
 		"neovim/nvim-lspconfig",
 		init = function()
 			local keys = require("lazyvim.plugins.lsp.keymaps").get()
+			-- 配置重启LSP
 			table.insert(keys, { "<leader>cL", "<cmd>LspRestart<cr>", desc = "Lsp Restart" })
 		end,
 	},

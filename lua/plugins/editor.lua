@@ -17,8 +17,19 @@ return {
 	},
 
 	{
+		"folke/which-key.nvim",
+		opts = {
+			spec = {
+				{ { "<leader>t", group = "terminals" } },
+			},
+		},
+	},
+
+	-- ranger
+	{
 		"simonmclean/triptych.nvim",
 		cmd = { "Triptych" },
+		keys = { { "<leader>.", "<cmd>Triptych<cr>", desc = "Ranger" } },
 		dependencies = {
 			"nvim-lua/plenary.nvim", -- required
 		},
@@ -35,25 +46,18 @@ return {
 		end,
 	},
 
-	-- flotterm
+	-- toggleterm
 	{
-		"voldikss/vim-floaterm",
-		cmd = { "FloatermNew", "FloatermToggle", "FloatermKill" },
-		init = function()
-			if vim.fn.has("win32") == 1 then
-				vim.g.floaterm_shell = "pwsh -nologo"
-			elseif vim.fn.has("mac") == 1 then
-				vim.g.floaterm_shell = "zsh"
-			end
-			vim.keymap.set("t", "<c-n>", "<cmd>FloatermNew<cr>", { desc = "FloatermNew" })
-			vim.g.floaterm_keymap_next = "<m-n>"
-
-			vim.g.floaterm_title = ""
-			vim.g.floaterm_width = 0.5
-			vim.g.floaterm_height = 0.45
-			vim.g.floaterm_position = "bottomright"
-		end,
+		"akinsho/toggleterm.nvim",
+		event = "VeryLazy",
+		keys = {
+			{ "<leader>tt", require("utils.terminal").toggleterm, desc = "Toggle Terminal" },
+			{ "<leader>tn", require("utils.terminal").terminal, desc = "New Terminal" },
+			{ "<leader>tl", "<cmd>TermSelect<cr>", desc = "Terminals" },
+		},
+		opts = { direction = "float", float_opts = { border = "curved", title_pos = "center" } },
 	},
+
 	-- translator
 	{
 		"voldikss/vim-translator",
@@ -67,7 +71,6 @@ return {
 	{
 		"HiPhish/rainbow-delimiters.nvim",
 		event = "BufReadPost",
-		init = function() end,
 	},
 
 	--  aerial

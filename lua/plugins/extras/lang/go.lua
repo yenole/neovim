@@ -43,8 +43,7 @@ return {
 								if line:find("func Test") then
 									local fn = string.match(line, "func Test(%w+)")
 									local cmd = "go test ./" .. dirname .. " -v --count 1 -run Test" .. fn
-									vim.cmd("FloatermToggle output")
-									vim.cmd("FloatermSend --name=output " .. cmd)
+									require("utils.terminal").output(cmd)
 								end
 							end,
 							desc = "Run Test (Go)",

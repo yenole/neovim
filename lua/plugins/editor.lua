@@ -28,12 +28,11 @@ return {
 	-- ranger
 	{
 		"simonmclean/triptych.nvim",
-		cmd = { "Triptych" },
 		keys = { { "<leader>.", "<cmd>Triptych<cr>", desc = "Ranger" } },
 		dependencies = {
 			"nvim-lua/plenary.nvim", -- required
 		},
-		opts = {},
+		opts = { options = { border = "rounded" } },
 	},
 
 	-- telescope
@@ -49,7 +48,6 @@ return {
 	-- toggleterm
 	{
 		"akinsho/toggleterm.nvim",
-		event = "VeryLazy",
 		keys = {
 			{ "<leader>tt", require("utils.terminal").toggleterm, desc = "Toggle Terminal" },
 			{ "<leader>tn", require("utils.terminal").terminal, desc = "New Terminal" },

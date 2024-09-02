@@ -34,4 +34,17 @@ return {
 		"HiPhish/rainbow-delimiters.nvim",
 		event = "BufReadPost",
 	},
+
+	{
+		"hedyhli/outline.nvim",
+		keys = { { "<leader>co", "<cmd>Outline<cr>", desc = "Toggle Outline" } },
+		opts = {
+			outline_window = {
+				width = 15,
+				relative_width = true,
+				auto_close = true,
+				auto_jump = true,
+			},
+		},
+	},
 }

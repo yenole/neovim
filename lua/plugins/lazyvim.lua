@@ -8,6 +8,8 @@ return {
 		},
 	},
 
+	{ "folke/trouble.nvim", enabled = false },
+
 	-- neo-tree
 	{
 		"nvim-neo-tree/neo-tree.nvim",

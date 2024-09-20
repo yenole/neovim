@@ -15,7 +15,7 @@ function M.get_terminal(cmd, opts)
 	opts = opts or {}
 	local toggleterm = require("toggleterm.terminal")
 	return toggleterm.find(function(term)
-		return term.display_name == opts.name
+		return term.display_name ~= nil and term.display_name == opts.name
 	end) or toggleterm.Terminal:new({
 		cmd = cmd,
 		dir = opts.cwd,
@@ -33,6 +33,7 @@ function M.lazyterm(cmd, opts)
 	if cmd == nil then
 		return M.toggleterm()
 	else
+		opts.name = cmd[1]
 		return M.terminal(table.concat(cmd, " "), opts)
 	end
 end

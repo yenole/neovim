@@ -8,7 +8,7 @@ return {
 		},
 	},
 
-	{ "folke/trouble.nvim", enabled = false },
+	-- { "folke/trouble.nvim", enabled = false },
 
 	-- neo-tree
 	{

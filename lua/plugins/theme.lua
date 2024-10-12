@@ -28,7 +28,7 @@ return {
 	{
 		"dracula/vim",
 		name = "dracula",
-		enabled = false,
+		enabled = true,
 		init = function()
 			vim.g.dracula_colorterm = 0
 		end,
@@ -38,7 +38,7 @@ return {
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
-		enabled = true,
+		enabled = false,
 		opts = {
 			disable_background = true,
 			disable_float_background = true,

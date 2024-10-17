@@ -21,7 +21,7 @@ return {
 	-- rainbow-delimiters
 	{
 		"HiPhish/rainbow-delimiters.nvim",
-		branch = "v0.3.0",
+		tag = "v0.3.0",
 		event = "BufReadPost",
 	},
 

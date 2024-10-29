@@ -30,6 +30,22 @@ return {
 							end,
 							desc = "Run (Rust)",
 						},
+						{
+							"<leader>dR",
+							function()
+								local utils = require("plugins.extras.utils")
+								local symbol = utils:match_symbol({
+									find = "^#%[tokio::test%]",
+									offset = 1,
+									extract = "fn ([%d%w-_]+)",
+								})
+								if symbol ~= nil then
+									local cmd = "cargo test " .. symbol .. " -- --nocapture"
+									require("utils.terminal").output(cmd)
+								end
+							end,
+							desc = "Run Test (Rust)",
+						},
 					},
 				},
 			},

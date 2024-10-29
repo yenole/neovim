@@ -39,10 +39,12 @@ return {
 									return
 								end
 								local dirname = vim.fn.fnamemodify(bufname, ":h")
-								local line = vim.fn.getline(".")
-								if line:find("func Test") then
-									local fn = string.match(line, "func Test(%w+)")
-									local cmd = "go test ./" .. dirname .. " -v --count 1 -run Test" .. fn
+								local symble = require("plugins.extras.utils"):match_symbol({
+									find = "*testing.T%) {$",
+									extract = "^func (Test[%w%d]+)%(",
+								})
+								if symble ~= nil then
+									local cmd = "go test ./" .. dirname .. " -v --count 1 -run " .. symble
 									require("utils.terminal").output(cmd)
 								end
 							end,

@@ -7,7 +7,7 @@ vim.keymap.set("i", "jk", "<ESC>")
 vim.keymap.set("n", "<leader>fs", "<cmd>w<cr>", { desc = "Saving file" })
 
 --覆写lazyvim函数
-LazyVim.terminal = require("utils.terminal").lazyterm
+Snacks.terminal = require("utils.terminal").lazyterm
 
 -- delete keymap
 vim.keymap.del("n", "<leader>ft")

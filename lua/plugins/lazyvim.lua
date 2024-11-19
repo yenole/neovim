@@ -67,20 +67,20 @@ return {
 	},
 
 	{
-		"nvimdev/dashboard-nvim",
-		opts = function(_, opts)
-			local logo = [[
+		"folke/snacks.nvim",
+		opts = {
+			dashboard = {
+				preset = {
+					header = [[
 ██╗   ██╗ ██████╗ ██████╗ ██╗   ██╗███╗   ██╗ ██████╗ 
 ╚██╗ ██╔╝██╔═══██╗██╔══██╗██║   ██║████╗  ██║██╔═══██╗
  ╚████╔╝ ██║   ██║██████╔╝██║   ██║██╔██╗ ██║██║   ██║
   ╚██╔╝  ██║   ██║██╔══██╗██║   ██║██║╚██╗██║██║   ██║
    ██║   ╚██████╔╝██║  ██║╚██████╔╝██║ ╚████║╚██████╔╝
    ╚═╝    ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ 
-        ]]
-			logo = string.rep("\n", 8) .. "\n" .. logo .. "\n\n"
-			opts.config.header = vim.split(logo, "\n", {})
-			table.remove(opts.config.center, 7)
-			table.remove(opts.config.center, 7)
-		end,
+          ]],
+				},
+			},
+		},
 	},
 }

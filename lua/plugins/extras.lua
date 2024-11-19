@@ -1,9 +1,4 @@
 return {
-	-- lazy extras
-	{ import = "lazyvim.plugins.extras.dap.core" },
-	{ import = "lazyvim.plugins.extras.coding.codeium" },
-	-- { import = "lazyvim.plugins.extras.lang.sql" },
-
 	--
 	--language
 	-- { import = "plugins.extras.lang.php" },

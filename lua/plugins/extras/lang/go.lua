@@ -39,7 +39,7 @@ return {
 									return
 								end
 								local dirname = vim.fn.fnamemodify(bufname, ":h")
-								local symble = require("plugins.extras.utils"):match_symbol({
+								local symble = require("utils.develop"):match_symbol({
 									find = "*testing.T%) {$",
 									extract = "^func (Test[%w%d]+)%(",
 								})

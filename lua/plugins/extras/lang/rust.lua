@@ -33,7 +33,7 @@ return {
 						{
 							"<leader>dR",
 							function()
-								local utils = require("plugins.extras.utils")
+								local utils = require("utils.develop")
 								local symbol = utils:match_symbol({
 									find = "^#%[tokio::test%]",
 									offset = 1,

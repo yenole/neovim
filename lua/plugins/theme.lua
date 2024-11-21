@@ -28,7 +28,7 @@ return {
 	{
 		"dracula/vim",
 		name = "dracula",
-		enabled = true,
+		enabled = false,
 		init = function()
 			vim.g.dracula_colorterm = 0
 		end,

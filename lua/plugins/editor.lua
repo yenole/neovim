@@ -9,6 +9,8 @@ return {
 		opts = { options = { border = "rounded" } },
 	},
 
+	{ "folke/which-key.nvim", opts = { preset = "classic" } },
+
 	-- translator
 	{
 		"voldikss/vim-translator",

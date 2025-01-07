@@ -1,14 +1,4 @@
 return {
-	-- ranger
-	{
-		"simonmclean/triptych.nvim",
-		keys = { { "<leader>.", "<cmd>Triptych<cr>", desc = "Ranger" } },
-		dependencies = {
-			"nvim-lua/plenary.nvim", -- required
-		},
-		opts = { options = { border = "rounded" } },
-	},
-
 	{ "folke/which-key.nvim", opts = { preset = "classic" } },
 
 	-- translator

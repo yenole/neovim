@@ -37,15 +37,24 @@ return {
 		},
 	},
 
+	{
+		"ibhagwan/fzf-lua",
+		opts = function(_, opts)
+			local fzf = require("fzf-lua")
+			fzf.config.defaults.keymap.builtin["<m-q>"] = "hide"
+			return opts
+		end,
+	},
+
 	-- nvim-lspconfig
-	-- {
-	-- 	"neovim/nvim-lspconfig",
-	-- 	init = function()
-	-- 		local keys = require("lazyvim.plugins.lsp.keymaps").get()
-	-- 		-- 配置重启LSP
-	-- 		table.insert(keys, { "<leader>cL", "<cmd>LspRestart<cr>", desc = "Lsp Restart" })
-	-- 	end,
-	-- },
+	{
+		"neovim/nvim-lspconfig",
+		init = function()
+			local keys = require("lazyvim.plugins.lsp.keymaps").get()
+			-- 配置重启LSP
+			table.insert(keys, { "<leader>cL", "<cmd>LspRestart<cr>", desc = "Lsp Restart" })
+		end,
+	},
 
 	-- notify
 	{

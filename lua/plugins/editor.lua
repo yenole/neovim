@@ -9,12 +9,11 @@ return {
 			-- vim.g.translator_default_engines = { "haici" }
 		end,
 	},
-
-	-- rainbow-delimiters
 	{
-		"HiPhish/rainbow-delimiters.nvim",
-		tag = "v0.3.0",
-		event = "BufReadPost",
+		"mikavilpas/yazi.nvim",
+		keys = {
+			{ "<leader>cy", "<cmd>Yazi toggle<cr>", desc = "Open yazi", mode = { "n", "v" } },
+		},
 	},
 
 	{

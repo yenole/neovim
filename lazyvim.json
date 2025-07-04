@@ -1,12 +1,14 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.ai.copilot",
+    "lazyvim.plugins.extras.ai.codeium",
     "lazyvim.plugins.extras.coding.luasnip",
     "lazyvim.plugins.extras.coding.mini-comment",
     "lazyvim.plugins.extras.dap.core",
+    "lazyvim.plugins.extras.lang.tailwind",
     "plugins.extras.lang.go",
     "plugins.extras.lang.http",
     "plugins.extras.lang.rust",
+    "plugins.extras.lang.solidity",
     "plugins.extras.lang.typescript"
   ],
   "install_version": 7,

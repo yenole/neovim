@@ -12,7 +12,7 @@ return {
 	{
 		"mikavilpas/yazi.nvim",
 		keys = {
-			{ "<leader>cy", "<cmd>Yazi toggle<cr>", desc = "Open yazi", mode = { "n", "v" } },
+			{ "<leader>z", "<cmd>Yazi toggle<cr>", desc = "Open yazi", mode = { "n", "v" } },
 		},
 	},
 

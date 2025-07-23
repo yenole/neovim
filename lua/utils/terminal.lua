@@ -45,7 +45,9 @@ end
 function M.output(cmd)
 	local term = M.get_terminal(nil, { name = " Output ", float_opts = right_bottom() })
 	term:open()
-	term:clear()
+	if cmd ~= nil then
+		term:clear()
+	end
 	vim.defer_fn(function()
 		term:send(cmd)
 	end, 1000)

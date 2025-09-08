@@ -11,6 +11,24 @@ local function right_bottom()
 	}
 end
 
+function M.term_select()
+	local toggleterm = require("toggleterm.terminal")
+	Snacks.picker.select(toggleterm.get_all(), {
+		format_item = function(item)
+			if item.display_name ~= nil then
+				return item.display_name:match("^%s*(.-)%s*$")
+			else
+				return item.name:match("([^;]+)")
+			end
+		end,
+		prompt = "Please select a terminal to open (or focus)",
+	}, function(item)
+		if item ~= nil then
+			item:toggle()
+		end
+	end)
+end
+
 function M.get_terminal(cmd, opts)
 	opts = opts or {}
 	local toggleterm = require("toggleterm.terminal")

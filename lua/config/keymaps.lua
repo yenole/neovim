@@ -1,5 +1,6 @@
 vim.keymap.set("n", "<leader>w", "<C-W>")
 vim.keymap.set("t", "<m-q>", "<C-\\><C-n>")
+vim.keymap.set("t", "<m-\\>", "<C-\\><C-n>")
 
 vim.keymap.set("i", "jk", "<ESC>")
 

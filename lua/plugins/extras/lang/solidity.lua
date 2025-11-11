@@ -1,13 +1,21 @@
 return {
-
-	-- add solidity to treesitter
+	recommended = function()
+		return LazyVim.extras.wants({
+			ft = "solidity",
+			root = {
+				"foundry.toml",
+				"hardhat.config.js",
+				"hardhat.config.ts",
+			},
+		})
+	end,
+	-- Add Solidity & related to treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
-		opts = function(_, opts)
-			table.insert(opts.ensure_installed, "solidity")
-		end,
+		opts = { ensure_installed = { "solidity" } },
 	},
 
+	-- Correctly setup lspconfig for Solidity
 	{
 		"mason-org/mason.nvim",
 		opts = function(_, opts)

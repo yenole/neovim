@@ -4,13 +4,13 @@
     "lazyvim.plugins.extras.coding.luasnip",
     "lazyvim.plugins.extras.coding.mini-comment",
     "lazyvim.plugins.extras.dap.core",
-    "lazyvim.plugins.extras.lang.solidity",
     "lazyvim.plugins.extras.lang.tailwind",
     "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.lang.vue",
     "plugins.extras.lang.go",
     "plugins.extras.lang.http",
-    "plugins.extras.lang.rust"
+    "plugins.extras.lang.rust",
+    "plugins.extras.lang.solidity"
   ],
   "install_version": 7,
   "news": {

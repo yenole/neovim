@@ -12,12 +12,13 @@ return {
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		opts = function(_, opts)
-			opts.enable_git_status = false
+			-- opts.enable_git_status = false
 			opts.window.mappings = {
 				["."] = {
 					function(state)
 						local node = state.tree:get_node()
 						vim.fn.chdir(node.path)
+						require("neo-tree.sources.filesystem.commands").set_root(state)
 					end,
 					desc = "set_root",
 				},

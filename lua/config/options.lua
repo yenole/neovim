@@ -6,7 +6,7 @@ vim.diagnostic.config({ virtual_text = false })
 vim.opt.clipboard = "unnamedplus"
 
 -- WSL yank
-if vim.fn.has("wsl") then
+if vim.fn.has("wsl") == 1 then
 	vim.g.clipboard = {
 		name = "win32yank-wsl",
 		copy = {

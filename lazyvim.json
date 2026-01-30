@@ -1,14 +1,13 @@
 {
   "extras": [
     "lazyvim.plugins.extras.ai.codeium",
+    "lazyvim.plugins.extras.ai.sidekick",
     "lazyvim.plugins.extras.coding.luasnip",
     "lazyvim.plugins.extras.coding.mini-comment",
     "lazyvim.plugins.extras.dap.core",
     "lazyvim.plugins.extras.lang.tailwind",
     "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.lang.vue",
-    "plugins.extras.ai.codecompanion",
-    "plugins.extras.ai.gemeni-cli",
     "plugins.extras.editor.outline",
     "plugins.extras.lang.go",
     "plugins.extras.lang.http",

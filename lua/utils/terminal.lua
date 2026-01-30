@@ -48,6 +48,7 @@ function M.toggleterm()
 end
 
 function M.lazyterm(cmd, opts)
+	opts = opts or {}
 	if cmd == nil then
 		return M.toggleterm()
 	else

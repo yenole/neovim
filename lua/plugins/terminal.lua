@@ -3,6 +3,7 @@ return {
 	{
 		"akinsho/toggleterm.nvim",
 		keys = {
+			{ "<c-/>", require("utils.terminal").toggleterm, mode = { "n", "i", "t" }, desc = "Toggle Terminal" },
 			{ "<leader>tt", require("utils.terminal").toggleterm, desc = "Toggle Terminal" },
 			{ "<leader>tn", require("utils.terminal").terminal, desc = "New Terminal" },
 			{ "<leader>to", require("utils.terminal").output, desc = "New Terminal" },

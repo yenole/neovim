@@ -4,7 +4,8 @@ return {
 		opts = {
 			cli = {
 				prompts = {
-					git = "Analyze the diff and split it into multiple Git commits.",
+					["git:commits"] = "Analyze the diff and split it into multiple Git commits.",
+					["git:tag"] = "Push the current branch and push the new tag.",
 				},
 			},
 		},

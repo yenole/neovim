@@ -1,6 +1,6 @@
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.mouse = ""
+vim.opt.mouse = "nvi"
 vim.opt.cmdheight = 0
 vim.diagnostic.config({ virtual_text = false })
 vim.opt.clipboard = "unnamedplus"

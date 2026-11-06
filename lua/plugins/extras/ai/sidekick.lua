@@ -32,8 +32,9 @@ return {
 			vim.api.nvim_create_autocmd("DirChanged", {
 				group = vim.api.nvim_create_augroup("sidekick_project_prompts", { clear = true }),
 				callback = function()
-					opts.cli.prompts = load()
-					require("sidekick.config").cli.prompts = opts.cli.prompts
+					local config = require("sidekick.config")
+					opts.cli.prompts = vim.tbl_deep_extend("force", config.cli.prompts or {}, load())
+					config.cli.prompts = opts.cli.prompts
 				end,
 			})
 
